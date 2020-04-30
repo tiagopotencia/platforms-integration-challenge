@@ -5,10 +5,10 @@ In this repository, you will be guided on how to develop and deliver a software 
 
 Before you start, pay close attention to these instructions.
 
-1 - Fork the project.
-2 - Create pull requestes for each implemented feature.
-3 - To deliver the project, create a branch called "develop" and merge the other branches created in it.
-4 - Document what you think is necessary from readme.md.
+- Fork the project.
+- Create pull requestes for each implemented feature.
+- To deliver the project, create a branch called "develop" and merge the other branches created in it.
+- Document what you think is necessary from readme.md.
 
 ## Story.
 We received an integration demand.
