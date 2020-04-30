@@ -10,7 +10,7 @@ Before you start, pay close attention to these instructions.
 - To deliver the project, create a branch called "develop" and merge the other branches created in it.
 - Document what you think is necessary from readme.md.
 
-## Story.
+## Story
 We received an integration demand.
 In this integration, we need to receive an HTTP request in a rest api and send the payload to an SQS queue. But, we will need to add some new fields to this payload before sending it to the queue.
 
@@ -34,7 +34,7 @@ This is the model contract we want to save in the queue:
 
 His team decided that it is necessary to create integration tests in this project and, if possible, load testing.
 
-## Requirement:
+## Requirement
 The project must be done with the language and libraries of your choice.
 
 To integration tests with SQS you can use this docker container: [roribio16/alpine-sqs](https://hub.docker.com/r/roribio16/alpine-sqs)
