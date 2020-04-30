@@ -37,6 +37,7 @@ His team decided that it is necessary to create integration tests in this projec
 ## Requirement
 The project must be done with the language and libraries of your choice.
 
+## Help
 To integration tests with SQS you can use this docker container: [roribio16/alpine-sqs](https://hub.docker.com/r/roribio16/alpine-sqs)
 
 For load tests, we suggest using the [locust](https://locust.io), but this is your choice.
