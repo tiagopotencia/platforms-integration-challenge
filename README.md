@@ -3,7 +3,7 @@ Welcome to the challenge of implementing platform integration.
 
 In this repository, you will be guided on how to develop and deliver a software project to the Bemobi Platforms team.
 
-Before applying, pay close attention to these instructions.
+Before you start, pay close attention to these instructions.
 
 1 - Fork the project.
 2 - Create pull requestes for each implemented feature.
