@@ -17,7 +17,7 @@ In this integration, we need to receive an HTTP request in a rest api and send t
 This is the contract that our client will send:
 ```json
 {
-  "productId": "8bac677a-1078-4a4d-b8ba-2877b52944ad"
+  "productId": "8bac677a-1078-4a4d-b8ba-2877b52944ad",
   "amount": "100"
 }
 ```
