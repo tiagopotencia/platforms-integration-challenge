@@ -22,13 +22,13 @@ class IntegrationController @Autowired constructor(
             print("Message received: ${integrationDto}")
             integrationService.processMessage(integrationDto)
         } catch (e: NumberFormatException) {
-            ResponseEntity.badRequest().body(mapOf("Message" to "The amount value must be a number"))
+           return ResponseEntity.badRequest().body(mapOf("Message" to "The amount value must be a number"))
         } catch (e: Exception) {
             print("Error whem processing message ${integrationDto}. Error: ${e}")
-            ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Message" to "We had a internal problem. Please, try again later.")
+           return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(mapOf("Message" to "We had a internal problem. Please, try again later."))
         }
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(mapOf("Message" to "Message sent to queue successfully!"))
+        return ResponseEntity.status(HttpStatus.CREATED).body(mapOf("Message" to "Message created in queue successfully!"))
     }
 
 }
