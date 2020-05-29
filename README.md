@@ -1,45 +1,26 @@
 # platforms-integration-challenge
-Welcome to the challenge of implementing platform integration.
+This is the challenge to join Bemobi team.
 
-In this repository, you will be guided on how to develop and deliver a software project to the Bemobi Platforms team.
+First of all, thanks for this great opportunity, in theese crazy times, we are doing our best to make life work and constantly improve all areas of our lifes. That challenge is prove that i want new things at my proffessional area.
 
-Before you start, pay close attention to these instructions.
+_Talk is cheap! Show me the code!_
 
-- Fork the project.
-- Create pull requestes for each implemented feature.
-- To deliver the project, create a branch called "develop" and merge the other branches created in it.
-- Document what you think is necessary from readme.md.
+This is the contract that our client wants to receive:
 
-## Story
-We received an integration demand.
-In this integration, we need to receive an HTTP request in a rest api and send the payload to an SQS queue. But, we will need to add some new fields to this payload before sending it to the queue.
+productId: String
+amount: String
 
-This is the contract that our client will send:
 ```json
 {
   "productId": "8bac677a-1078-4a4d-b8ba-2877b52944ad",
   "amount": "100"
 }
 ```
-This is the model contract we want to save in the queue:
-```json
-{
-  "productId": "8bac677a-1078-4a4d-b8ba-2877b52944ad",
-  "amount": 0.01,
-  "status": "active",
-  "createdAt": "2020-04-30T22:33:16.497Z",
-  "ttl": "1588285962993"
-}
-```
 
-His team decided that it is necessary to create integration tests in this project and, if possible, load testing.
+If you send a payload like this, you will receive a 201 showing that the integration platform created the resource that you want.
 
-## Requirement
-The project must be done with the language and libraries of your choice.
+If not, you will receive a 400 for BadRequest or a 500 if the error is our fault. 
 
-## Help
-To integration tests with SQS you can use this docker container: [roribio16/alpine-sqs](https://hub.docker.com/r/roribio16/alpine-sqs)
+The Locust config file is on project's root folder to load test (please, be kind with my API)
 
-For load tests, we suggest using the [locust](https://locust.io), but this is your choice.
-
-Good luck!
+Thanks a lot for this opportunity!
