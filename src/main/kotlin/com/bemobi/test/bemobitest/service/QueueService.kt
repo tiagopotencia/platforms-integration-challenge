@@ -21,10 +21,14 @@ class QueueService (
             .build()
 
     fun send(transformedDto: TransformedDto) {
+        val jsonMessage = Gson().toJson(transformedDto)
+
         sqsClient.sendMessage(SendMessageRequest.builder()
                 .queueUrl(sqsQueueUrl)
-                .messageBody(Gson().toJson(transformedDto))
+                .messageBody(jsonMessage)
                 .delaySeconds(10)
                 .build())
+
+        println("Message: ${jsonMessage} inserted successfully!")
     }
 }

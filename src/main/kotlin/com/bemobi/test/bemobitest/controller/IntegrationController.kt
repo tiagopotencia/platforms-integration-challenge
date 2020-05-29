@@ -19,12 +19,12 @@ class IntegrationController @Autowired constructor(
     @PostMapping("/")
     fun sendToQueue(@RequestBody(required = true) integrationDto: IntegrationDto) : ResponseEntity<*> {
         try {
-            print("Message received: ${integrationDto}")
+            println("Message received: ${integrationDto}")
             integrationService.processMessage(integrationDto)
         } catch (e: NumberFormatException) {
            return ResponseEntity.badRequest().body(mapOf("Message" to "The amount value must be a number"))
         } catch (e: Exception) {
-            print("Error whem processing message ${integrationDto}. Error: ${e}")
+            println("Error whem processing message ${integrationDto}. Error: ${e}")
            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(mapOf("Message" to "We had a internal problem. Please, try again later."))
         }
 
