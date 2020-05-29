@@ -10,7 +10,7 @@ import java.time.LocalDateTime
 
 
 @Service
-class IntegrationService @Autowired constructor(val queueService: QueueService){
+class IntegrationService @Autowired constructor(private val queueService: QueueService){
 
     fun processMessage(integrationDto: IntegrationDto) {
         val finalDto = trasnformDto(integrationDto)
